@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /tags/
+Allow: /about/
+Allow: /bbs/
+
+Disallow: /js/
+Disallow: /css/
+Disallow: /loli/
+Disallow: /ss/
+
+Sitemap: http://pllog.top/sitemap.xml

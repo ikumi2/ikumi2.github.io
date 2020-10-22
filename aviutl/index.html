@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"pllog.top","root":"/","scheme":"Gemini","version":"8.0.1","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+
+  <meta name="description" content="Aviutl 中文完整汉化版个人整合  简介 Aviutl是一个免费的视频编辑工具扩展能力很强 编辑视频,压缩视频,渲染特效插件自由化 可安装需要的插件 编解码器等详细请访问 Aviutl汉化作者：ff13cn（来自b站的一个up）本人提取汉化版的语言和扩展编辑等插件重新整合 更新 更新记录历史记录  2018-03-28 初整合2018-04-09 脚本和本体分开 更新x264 x265个人预设">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Aviutl">
+<meta property="og:url" content="https://pllog.top/aviutl/index.html">
+<meta property="og:site_name" content="プラチナの部屋">
+<meta property="og:description" content="Aviutl 中文完整汉化版个人整合  简介 Aviutl是一个免费的视频编辑工具扩展能力很强 编辑视频,压缩视频,渲染特效插件自由化 可安装需要的插件 编解码器等详细请访问 Aviutl汉化作者：ff13cn（来自b站的一个up）本人提取汉化版的语言和扩展编辑等插件重新整合 更新 更新记录历史记录  2018-03-28 初整合2018-04-09 脚本和本体分开 更新x264 x265个人预设">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2018/10/17/5bc65409c293e.jpg">
+<meta property="article:published_time" content="2018-03-28T13:33:00.000Z">
+<meta property="article:modified_time" content="2020-10-22T18:31:30.223Z">
+<meta property="article:author" content="白金biu">
+<meta property="article:tag" content="Aviutl">
+<meta property="article:tag" content="x264">
+<meta property="article:tag" content="x265">
+<meta property="article:tag" content="AviSynth">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2018/10/17/5bc65409c293e.jpg">
+
+
+<link rel="canonical" href="https://pllog.top/aviutl/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Aviutl | プラチナの部屋</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">プラチナの部屋</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-播放器">
+
+    <a href="https://music.pllog.top/" rel="noopener" target="_blank"><i class="fa fa-music fa-fw"></i>播放器</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0"><span class="nav-number">2.</span> <span class="nav-text">更新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B4%E5%90%88%E5%88%97%E8%A1%A8"><span class="nav-number">3.</span> <span class="nav-text">整合列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%87%E7%94%A8%E6%8F%92%E4%BB%B6"><span class="nav-number">4.</span> <span class="nav-text">备用插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BF%85%E8%A6%81%E7%8E%AF%E5%A2%83"><span class="nav-number">5.</span> <span class="nav-text">必要环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD"><span class="nav-number">6.</span> <span class="nav-text">下载</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="白金biu"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">白金biu</p>
+  <div class="site-description" itemprop="description">发现了新大陆？</div>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/neko_biu" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;neko_biu" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://t.me/nekobiu" title="Telegram → https:&#x2F;&#x2F;t.me&#x2F;nekobiu" rel="noopener" target="_blank"><i class="fab fa-telegram fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/925975" title="bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;925975" rel="noopener" target="_blank"><i class="fab fa-youtube fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=597043272&site=qq&menu=yes" title="QQ → http:&#x2F;&#x2F;wpa.qq.com&#x2F;msgrd?v&#x3D;3&amp;uin&#x3D;597043272&amp;site&#x3D;qq&amp;menu&#x3D;yes" rel="noopener" target="_blank"><i class="fab fa-qq fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+      </section>
+        <div class="back-to-top animated">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://pllog.top/aviutl/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="白金biu">
+      <meta itemprop="description" content="发现了新大陆？">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="プラチナの部屋">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Aviutl
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-03-28 21:33:00" itemprop="dateCreated datePublished" datetime="2018-03-28T21:33:00+08:00">2018-03-28</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-10-23 02:31:30" itemprop="dateModified" datetime="2020-10-23T02:31:30+08:00">2020-10-23</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index"><span itemprop="name">软件</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%BD%AF%E4%BB%B6/%E8%A7%86%E9%A2%91%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index"><span itemprop="name">视频软件</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Aviutl 中文完整汉化版个人整合</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc65409c293e.jpg"></p>
+<div class="note danger"><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4></div>
+<p>Aviutl是一个免费的视频编辑工具<br>扩展能力很强 编辑视频,压缩视频,渲染特效<br>插件自由化 可安装需要的插件 编解码器等<br>详细请访问 <a target="_blank" rel="noopener" href="http://aviutl.info/">Aviutl</a><br>汉化作者：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av19177935">ff13cn</a>（来自b站的一个up）<br>本人提取汉化版的语言和扩展编辑等插件重新整合</p>
+<div class="note danger"><h4 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h4></div>
+<div class="tabs" id="a"><ul class="nav-tabs"><li class="tab active"><a href="#a-1">更新记录</a></li></ul><div class="tab-content"><div class="tab-pane active" id="a-1"><details class="note "><summary><p>历史记录</p>
+</summary>
+<p>2018-03-28 初整合<br>2018-04-09 脚本和本体分开 更新x264 x265个人预设方案和版本<br>2018-11-01 更新x264 x265 gui qaac和编码器<br>2018-11-19 更新x264 x265 gui和编码器 L-SMASH_Works_r935 个人预设方案<br>（移除qaac提供单独下载,包含DLL不再依赖安装AppleApplicationSupport）<br>2018-12-12 更新x264 x265gui qaac2.68<br>2019-06-25 更新x264+x265编码器和gui，FDKAAC，动态链接库，mkvmerge35.0，L-SMASH_Works_r935+libaom（6月版本用于导入AV1编码格式）<br>2019-07-28 更新x264+x265编码器GUI，加入ffmpegout flac opus 章节编辑汉化，更新x264+265+AV1个人预设方案<br>2019-08-20 更新Aviutl本体8月最新版1.10<br>2019-09-15 更新1.0和1.1版的 L-SMASH 9月份版本 添加SVT-AV1编码器和图形界面 更新mkvmerge<br>2019-11-17 更新L-SMASH11月份版本AV1解码器改为dav1d更新x264和x265gui和编码器更新mkvmerge（停止更新1.0本体版本）<br>2019-12-19 更新L-SMASH 12月份版本 更新x264和x265编码器 更新mkvmerge</p>
+
+</details>
+
+<p>2020-01-26 更新x264+265编码器和GUI，更新L-SMASH Works 1月份版本，更新mkvmerge 42<br>（不再支持win7，请使用win10 1809以上的系统版本）<br>2020-03-03 更新x264+x265编码器和GUI，更新L-SMASH Works 2月分版本，更新mkvmerge 43，更新SVT-AV1编码器和GUI<br>2020-04-03 更新x264+x265GUI，更新muxer，更新L-SMASH Works 3月分版本，更新mkvmerge 44，更新N卡专用的插件cufilters并汉化<br>2020-09-04 更新x264+x265+SVT-AV1编码器和GUI，更新L-SMASH 1484，更新mkvmerge 49<br>2020-10-10 更新x265+SVT-AV1编码器和GUI，更新L-SMASH 9月份版本，更新mkvmerge 51</p></div></div></div>
+
+
+<div class="note danger"><h4 id="整合列表"><a href="#整合列表" class="headerlink" title="整合列表"></a>整合列表</h4></div>
+<p><a target="_blank" rel="noopener" href="http://spring-fragrance.mints.ne.jp/aviutl/">Aviutl 1.10</a> 本体<br><a target="_blank" rel="noopener" href="http://spring-fragrance.mints.ne.jp/aviutl/">拡張編集 0.92</a> 扩展编辑<br><a target="_blank" rel="noopener" href="http://pop.4-bit.jp/?page_id=7929">L-SMASH rev1484</a> L-SMASH插件<br><a target="_blank" rel="noopener" href="http://pop.4-bit.jp/?page_id=7929">L-SMASH Works r1055_libdav1d</a> L-SMASH插件<br><a target="_blank" rel="noopener" href="https://code.google.com/archive/p/ostube/downloads?page=3">neroAacEnc 1.5.4</a> NeroAAC编码器<br><a target="_blank" rel="noopener" href="https://sites.google.com/site/qaacpage/cabinet">qaac 2.68</a> Apple qaac编码器<br><a target="_blank" rel="noopener" href="https://github.com/OpenVisualCloud/SVT-AV1">SVT-AV1</a> SVT-AV1编码器<br><a target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1G3vOBXVrL9H7a2M5cvqTC09C6LfMdglF">svtAV1guiEx</a> SVT-AV1编码器图形界面<br><a target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/0BzA4dIFteM2db1VJclc2S0VtQlU">x264 r3018 x64</a> x264编码器<br><a target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/0BzA4dIFteM2dOWhmTXA3bE9WaWs">x264guiEx 2.65v2</a> x264编码器图形界面<br><a target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/0BzA4dIFteM2dWEpvWGZXV3ZhdTA">x265 r3.4+19 x64</a> x265编码器<br><a target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/0BzA4dIFteM2dRkRzWXZMT0lkM2M">x265guiEx 3.101</a> x265编码器图形界面<br><a target="_blank" rel="noopener" href="https://code.google.com/archive/p/vsfiltermod/downloads">VSFilter v3.4</a> 动态链接库<br><a target="_blank" rel="noopener" href="https://github.com/MaverickTse/csriFileReader-AviUtl">csriFileReader</a> 字幕载入插件<br><a target="_blank" rel="noopener" href="http://www.avisynth.info/?warpsharp%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8">warpsharp 2008</a> AVS脚本调用插件<br><a target="_blank" rel="noopener" href="https://www40.atwiki.jp/aviutl41991/pages/37.html">warpsharpMT v133ex6</a> 线条滤镜<br><a target="_blank" rel="noopener" href="http://nilposoft.info/aviutl-plugin/">NL-means</a> 降噪滤镜<br><a target="_blank" rel="noopener" href="http://nilposoft.info/aviutl-plugin/">NL-means gpu</a> 降噪滤镜 for GPU<br><a target="_blank" rel="noopener" href="http://nilposoft.info/aviutl-plugin/">SharpenResize</a> 高级滤镜 for GPU（调整分辨率 降噪 锐化等）<br><a target="_blank" rel="noopener" href="https://www26.atwiki.jp/kmgr/pages/41.html#id_e41b3147">ass_load_avs</a> ASS字幕AVS脚本生成批处理<br><a target="_blank" rel="noopener" href="http://aviutl.info/jpeg-png/">PNG输出</a> 输出当前帧的PNG图像</p>
+<div class="note danger"><h4 id="备用插件"><a href="#备用插件" class="headerlink" title="备用插件"></a>备用插件</h4></div>
+<p>以下插件不在整合里<br><a target="_blank" rel="noopener" href="http://spring-fragrance.mints.ne.jp/aviutl/">BMP输出</a><br><a target="_blank" rel="noopener" href="http://aviutl.info/jpeg-png/">JPG输出</a><br><a target="_blank" rel="noopener" href="https://github.com/YSRKEN/aviutl-waifu2x-w2xc/releases">waifu2x</a><br><a target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/0BzA4dIFteM2dS1ZUT1FjTnF3Q0E">N卡编码器</a><br><a target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/0BzA4dIFteM2dazcxNnYwRXpvNFU">A卡编码器</a><br><a target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/0BzA4dIFteM2dVGZ5dE5lSE5mYVk">QSV编码器</a><br><a target="_blank" rel="noopener" href="http://nilposoft.info/aviutl-plugin/">调整分辨率EX 色差 色彩变换等滤镜</a><br><a target="_blank" rel="noopener" href="http://aoytsk.blog.jp/aviutl/rec.zip">录音</a><br><a target="_blank" rel="noopener" href="http://1drv.ms/1wRfp6G">动态追踪</a><br><a target="_blank" rel="noopener" href="http://aoytsk.blog.jp/aviutl/tegaki.zip">图画</a><br><a target="_blank" rel="noopener" href="https://github.com/Aios-Ciao/VSThost4aviutl">声音调试和VST</a><br><a target="_blank" rel="noopener" href="http://aoytsk.blog.jp/aviutl/422768.html">扩展编辑工具栏</a><br><a target="_blank" rel="noopener" href="http://1drv.ms/1t1myhJ">DGE2 GIF输出</a></p>
+<div class="note danger"><h4 id="必要环境"><a href="#必要环境" class="headerlink" title="必要环境"></a>必要环境</h4></div>
+<p><a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-CN/download/details.aspx?id=5582">VC++2008</a><br><a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-CN/download/details.aspx?id=40784">VC++2013</a><br><a target="_blank" rel="noopener" href="http://avisynth.nl/index.php/Main_Page">AviSynth</a></p>
+<div class="note danger"><h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4></div>
+<p><a target="_blank" rel="noopener" href="https://www.lanzous.com/b799096/">蓝奏</a> 5lgs<br><a target="_blank" rel="noopener" href="https://share.weiyun.com/5VShqUc">微云</a> x442vr<br><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/10j9xq0rXKl7tHiUTCng4Yg">度盘</a> b288<br><a target="_blank" rel="noopener" href="https://mega.nz/#F!oJQiRAzK!7RE8iiAmI8WlUJ-bkBiEcA">Mega</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Aviutl/" rel="tag"># Aviutl</a>
+              <a href="/tags/x264/" rel="tag"># x264</a>
+              <a href="/tags/x265/" rel="tag"># x265</a>
+              <a href="/tags/AviSynth/" rel="tag"># AviSynth</a>
+          </div>
+
+        
+
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+<script type="text/javascript" src="https://js.users.51.la/19768391.js"></script>
+<div class="powered-by">
+© 2017 白金biu
+<!-- 修改-页脚 -->
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8.8.0/dist/mermaid.min.js', () => {
+    mermaid.init({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    }, '.mermaid');
+  }, window.mermaid);
+}
+</script>
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
