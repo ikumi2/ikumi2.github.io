@@ -44,111 +44,103 @@
 <div class="tabs" id="1"><ul class="nav-tabs"><li class="tab active"><a href="#1-1">本地配置</a></li><li class="tab"><a href="#1-2">服务器配置</a></li><li class="tab"><a href="#1-3">部署</a></li><li class="tab"><a href="#1-4">优化</a></li></ul><div class="tab-content"><div class="tab-pane active" id="1-1"><div class="note danger"><h4 id="本地配置"><a href="#本地配置" class="headerlink" title="本地配置"></a>本地配置</h4></div>
 
 <h5 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h5><ol>
-<li>下载 <a href="https://git-scm.com/">git</a> 和 <a href="https://nodejs.org/en/">nodejs</a>并安装(全默认即可)  </li>
-<li>在 D 盘里新建 blog 文件夹  </li>
-<li>在 blog 文件夹右键 Git Bash Here  </li>
+<li>下载 <a href="https://git-scm.com/">git</a> 和 <a href="https://nodejs.org/en/">nodejs</a>并安装(全默认即可)</li>
+<li>在 D 盘里新建 blog 文件夹</li>
+<li>在 blog 文件夹右键 Git Bash Here</li>
 </ol>
 <h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><ol>
-<li><p>安装hexo  </p>
+<li><p>安装hexo</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>初始化hexo  </p>
+<li><p>初始化hexo</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>安装git部署  </p>
+<li><p>安装git部署</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>安装文章管理  </p>
+<li><p>安装文章管理</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-admin</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>安装搜索(可选)  </p>
+<li><p>安装搜索(可选)</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>安装<a href="https://github.com/EYHN/hexo-helper-live2d">live2d</a>插件(可选)  </p>
+<li><p>安装<a href="https://github.com/EYHN/hexo-helper-live2d">live2d</a>插件(可选)</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>安装网站地图插件(可选)  </p>
+<li><p>安装网站地图插件(可选)</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
 <h5 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h5><ol>
-<li><p>添加个人信息  </p>
+<li><p>添加个人信息</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;xxxxx&quot;</span><br><span class="line">git config --global user.email &quot;xxxxx@qq.com&quot;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>创建密钥  </p>
+<li><p>创建密钥</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;xxxxx@qq.com&quot;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>完成后使用 <code>hexo s</code> 启动本地服务 访问 <a href="http://localhost:4000/">http://localhost:4000</a> 即可看到你的网站 </p>
+<li><p>完成后使用 <code>hexo s</code> 启动本地服务 访问 <a href="http://localhost:4000/">http://localhost:4000</a> 即可看到你的网站</p>
 </li>
 </ol>
 <p><a href="#1-2">下一页</a></p></div><div class="tab-pane" id="1-2"><div class="note danger"><h4 id="服务器配置"><a href="#服务器配置" class="headerlink" title="服务器配置"></a>服务器配置</h4></div>
 
 <h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><ul>
-<li><p>安装nginx和git<br>CentOS  </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum update</span><br><span class="line">yum install nginx</span><br><span class="line">yum install git</span><br></pre></td></tr></table></figure>
-Debian(Ubuntu)  
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get install nginx</span><br><span class="line">apt-get install git</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>如果你是Debian 9 建议使用鼠标复制粘贴<br>把 set mouse=a 改为 set mouse-=a  </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vi &#x2F;usr&#x2F;share&#x2F;vim&#x2F;vim80&#x2F;defaults.vim</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if has(&#39;mouse&#39;)</span><br><span class="line">  set mouse-&#x3D;a</span><br><span class="line">endif</span><br></pre></td></tr></table></figure>
+<li>安装nginx和git<br>CentOS<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum update</span><br><span class="line">yum install nginx</span><br><span class="line">yum install git</span><br></pre></td></tr></table></figure>
+Debian(Ubuntu)<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get install nginx</span><br><span class="line">apt-get install git</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
 <h5 id="配置nginx"><a href="#配置nginx" class="headerlink" title="配置nginx"></a>配置nginx</h5><ol>
-<li><p>编辑nginx配置文件  </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vi &#x2F;etc&#x2F;nginx&#x2F;nginx.conf</span><br></pre></td></tr></table></figure>
+<li><p>编辑nginx配置文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vi &#x2F;etc&#x2F;nginx&#x2F;nginx.conf</span><br></pre></td></tr></table></figure></li>
+<li><p>更改网站根目录为  /home/git/www</p>
 </li>
-<li><p>更改网站根目录为  /home/git/www  </p>
-</li>
-<li><p>保存退出后重启nginx  </p>
+<li><p>保存退出后重启nginx</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;etc&#x2F;init.d&#x2F;nginx restart</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><figcaption><span>可以使用下面完整的配置</span></figcaption><table><tr><td class="code"><pre><span class="line">user www-data;</span><br><span class="line">worker_processes auto;</span><br><span class="line">pid &#x2F;run&#x2F;nginx.pid;</span><br><span class="line">include &#x2F;etc&#x2F;nginx&#x2F;modules-enabled&#x2F;*.conf;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">        worker_connections 768;</span><br><span class="line">         # multi_accept on;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    sendfile on;</span><br><span class="line">    tcp_nopush on;</span><br><span class="line">    tcp_nodelay on;</span><br><span class="line">    keepalive_timeout 65;</span><br><span class="line">    types_hash_max_size 2048;</span><br><span class="line"></span><br><span class="line">    include &#x2F;etc&#x2F;nginx&#x2F;mime.types;</span><br><span class="line">    default_type application&#x2F;octet-stream;</span><br><span class="line"></span><br><span class="line">    ssl_protocols TLSv1 TLSv1.1 TLSv1.2; # Dropping SSLv3, ref: POODLE</span><br><span class="line">    ssl_prefer_server_ciphers on;</span><br><span class="line"></span><br><span class="line">    gzip on;</span><br><span class="line">    gzip_disable &quot;msie6&quot;;</span><br><span class="line"></span><br><span class="line">    gzip_vary on;</span><br><span class="line">    gzip_proxied any;</span><br><span class="line">    gzip_comp_level 6;</span><br><span class="line">    gzip_buffers 16 8k;</span><br><span class="line">    gzip_http_version 1.1;</span><br><span class="line">    gzip_types text&#x2F;plain text&#x2F;css application&#x2F;json application&#x2F;javascript text&#x2F;xml application&#x2F;xml application&#x2F;xml+rss text&#x2F;javascript;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        listen  80 default_server;</span><br><span class="line">        server_name www1.pllog.top;</span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">            root   &#x2F;home&#x2F;git&#x2F;www;</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        server_name localhost;</span><br><span class="line">        rewrite ^ 127.0.0.1$request_uri? permanent;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment">#Nginx配置</span></span><br><span class="line">user www-data;</span><br><span class="line">worker_processes auto;</span><br><span class="line">pid /run/nginx.pid;</span><br><span class="line">include /etc/nginx/modules-enabled/*.conf;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">        worker_connections 768;</span><br><span class="line">         <span class="comment"># multi_accept on;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    sendfile on;</span><br><span class="line">    tcp_nopush on;</span><br><span class="line">    tcp_nodelay on;</span><br><span class="line">    keepalive_timeout 65;</span><br><span class="line">    types_hash_max_size 2048;</span><br><span class="line"></span><br><span class="line">    include /etc/nginx/mime.types;</span><br><span class="line">    default_type application/octet-stream;</span><br><span class="line"></span><br><span class="line">    ssl_protocols TLSv1 TLSv1.1 TLSv1.2; <span class="comment"># Dropping SSLv3, ref: POODLE</span></span><br><span class="line">    ssl_prefer_server_ciphers on;</span><br><span class="line"></span><br><span class="line">    gzip on;</span><br><span class="line">    gzip_disable <span class="string">&quot;msie6&quot;</span>;</span><br><span class="line"></span><br><span class="line">    gzip_vary on;</span><br><span class="line">    gzip_proxied any;</span><br><span class="line">    gzip_comp_level 6;</span><br><span class="line">    gzip_buffers 16 8k;</span><br><span class="line">    gzip_http_version 1.1;</span><br><span class="line">    gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        listen  80 default_server;</span><br><span class="line">        server_name www1.pllog.top;</span><br><span class="line">        location / &#123;</span><br><span class="line">            root   /home/git/www;</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        server_name localhost;</span><br><span class="line">        rewrite ^ 127.0.0.1<span class="variable">$request_uri</span>? permanent;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
 <h5 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h5><ol>
-<li><p>添加git用户  </p>
+<li><p>添加git用户</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">adduser git</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>进入git用户  </p>
+<li><p>进入git用户</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">su git</span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
 <h5 id="添加密钥"><a href="#添加密钥" class="headerlink" title="添加密钥"></a>添加密钥</h5><ol>
-<li><p>创建.ssh目录  </p>
+<li><p>创建.ssh目录</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd ~</span><br><span class="line">mkdir .ssh</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>进入.ssh目录创建authorized_keys文件  </p>
+<li><p>进入.ssh目录创建authorized_keys文件</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd .ssh</span><br><span class="line">touch authorized_keys</span><br><span class="line">chmod 600 .&#x2F;authorized_keys</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>用记事本打开本地的 id_rsa.pub 把公钥复制到 authorized_keys 中  </p>
+<li><p>用记事本打开本地的 id_rsa.pub 把公钥复制到 authorized_keys 中</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vi authorized_keys</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>编辑好后测试密钥是否登录成功git用户，成功后继续下一步  </p>
+<li><p>编辑好后测试密钥是否登录成功git用户，成功后继续下一步</p>
 </li>
 </ol>
 <h5 id="添加git仓库"><a href="#添加git仓库" class="headerlink" title="添加git仓库"></a>添加git仓库</h5><ol>
-<li><p>添加网站根目录文件夹和git仓库  </p>
+<li><p>添加网站根目录文件夹和git仓库</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd ~</span><br><span class="line">mkdir www</span><br><span class="line">git init --bare hexo.git</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>在 git 仓库的 hooks 里创建 post-receive 文件 并给予执行权限  </p>
+<li><p>在 git 仓库的 hooks 里创建 post-receive 文件 并给予执行权限</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd hexo.git</span><br><span class="line">cd hooks</span><br><span class="line">touch post-receive</span><br><span class="line">chmod a+x post-receive</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>设置钩子自动部署    </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vi post-receive</span><br></pre></td></tr></table></figure>  
-<figure class="highlight plain"><figcaption><span>添加下面代码</span></figcaption><table><tr><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;bash</span><br><span class="line"></span><br><span class="line">rm -rf &#x2F;home&#x2F;git&#x2F;hexo</span><br><span class="line">git clone &#x2F;home&#x2F;git&#x2F;hexo.git &#x2F;home&#x2F;git&#x2F;hexo</span><br><span class="line"></span><br><span class="line">rm -rf &#x2F;home&#x2F;git&#x2F;www&#x2F;*</span><br><span class="line">mv &#x2F;home&#x2F;git&#x2F;hexo&#x2F;* &#x2F;home&#x2F;git&#x2F;www</span><br></pre></td></tr></table></figure>
+<li><p>设置钩子自动部署</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vi post-receive</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><figcaption><span>配置</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">rm -rf /home/git/hexo</span><br><span class="line">git <span class="built_in">clone</span> /home/git/hexo.git /home/git/hexo</span><br><span class="line"></span><br><span class="line">rm -rf /home/git/www/*</span><br><span class="line">mv /home/git/hexo/* /home/git/www</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>以上完成服务器配置 接着下一步的部署  </p>
+<li><p>以上完成服务器配置 接着下一步的部署</p>
 </li>
 </ol>
 <p><a href="#1-1">上一页</a><br><a href="#1-3">下一页</a></p></div><div class="tab-pane" id="1-3"><div class="note danger"><h4 id="部署到服务器"><a href="#部署到服务器" class="headerlink" title="部署到服务器"></a>部署到服务器</h4></div>
 
 <h5 id="配置-deploy"><a href="#配置-deploy" class="headerlink" title="配置 deploy"></a>配置 deploy</h5><ul>
-<li>编辑网站配置文件 _config.yml  <figure class="highlight plain"><figcaption><span>单个仓库</span></figcaption><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@你的服务器IP:hexo.git,master</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><figcaption><span>多个仓库</span></figcaption><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: </span><br><span class="line">    vps1: git@你的服务器IP:hexo.git,master</span><br><span class="line">    vps2: git@你的服务器IP:hexo.git,master</span><br><span class="line">    github: git@github.com:xxxxx&#x2F;xxxxx.github.io.git,master</span><br></pre></td></tr></table></figure>
+<li>编辑网站配置文件 _config.yml<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@你的服务器IP:hexo.git,master</span><br><span class="line">&#123;%endcodeblock%&#125;</span><br><span class="line">&#123;%codeblock 多个仓库%&#125;</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: </span><br><span class="line">    vps1: git@你的服务器IP:hexo.git,master</span><br><span class="line">    vps2: git@你的服务器IP:hexo.git,master</span><br><span class="line">    github: git@github.com:xxxxx&#x2F;xxxxx.github.io.git,master</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
@@ -161,30 +153,29 @@ Debian(Ubuntu)
 <p><a href="#1-2">上一页</a><br><a href="#1-4">下一页</a></p></div><div class="tab-pane" id="1-4"><div class="note danger"><h4 id="网站和NexT优化"><a href="#网站和NexT优化" class="headerlink" title="网站和NexT优化"></a>网站和NexT优化</h4></div>
 
 <h5 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h5><ul>
-<li><p>添加 Local Search 搜索服务<br>编辑 _config.yml 搜索 local_search 把 enable 设为 true  </p>
+<li><p>添加 Local Search 搜索服务<br>编辑 _config.yml 搜索 local_search 把 enable 设为 true</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">local_search:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>设置 Google Webmaster<br>打开 <a href="https://www.google.com/webmasters/tools">Google Search Console</a> 添加你的网站<br>选择备用 html 标记  </p>
+<li><p>设置 Google Webmaster<br>打开 <a href="https://www.google.com/webmasters/tools">Google Search Console</a> 添加你的网站<br>选择备用 html 标记</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;meta name&#x3D;&quot;google-site-verification&quot; content&#x3D;&quot;xxxxx&quot; &#x2F;&gt;</span><br></pre></td></tr></table></figure>
-把xxxxx里的内容复制到主题配置文件 
+<p>把xxxxx里的内容复制到主题配置文件 </p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">google_site_verification: xxxxxx</span><br></pre></td></tr></table></figure>
-验证完成后提交网站地图
-
+<p>验证完成后提交网站地图</p>
 </li>
 </ul>
 <h5 id="网站配置"><a href="#网站配置" class="headerlink" title="网站配置"></a>网站配置</h5><ul>
-<li><p>设置域名<br>编辑 _config.yml 搜索 url: 设置你的域名  </p>
+<li><p>设置域名<br>编辑 _config.yml 搜索 url: 设置你的域名</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">url: http:&#x2F;&#x2F;pllog.top </span><br></pre></td></tr></table></figure>
 </li>
-<li><p>添加蜘蛛协议<br>在网站 source 文件夹下新建 robots.txt 文件  </p>
-<figure class="highlight plain"><figcaption><span>把下面内容复制到 robots.txt 里 并修改域名</span></figcaption><table><tr><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Allow: &#x2F;</span><br><span class="line">Allow: &#x2F;archives&#x2F;</span><br><span class="line">Allow: &#x2F;tags&#x2F;</span><br><span class="line">Allow: &#x2F;about&#x2F;</span><br><span class="line"></span><br><span class="line">Disallow: &#x2F;vendors&#x2F;</span><br><span class="line">Disallow: &#x2F;js&#x2F;</span><br><span class="line">Disallow: &#x2F;css&#x2F;</span><br><span class="line">Disallow: &#x2F;fonts&#x2F;</span><br><span class="line">Disallow: &#x2F;vendors&#x2F;</span><br><span class="line">Disallow: &#x2F;fancybox&#x2F;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Sitemap: http:&#x2F;&#x2F;xxxxx.github.io&#x2F;sitemap.xml</span><br></pre></td></tr></table></figure>
+<li><p>添加蜘蛛协议<br>在网站 source 文件夹下新建 robots.txt 文件 把下面内容复制到 robots.txt 里 并修改域名</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Allow: &#x2F;</span><br><span class="line">Allow: &#x2F;archives&#x2F;</span><br><span class="line">Allow: &#x2F;tags&#x2F;</span><br><span class="line">Allow: &#x2F;about&#x2F;</span><br><span class="line"></span><br><span class="line">Disallow: &#x2F;js&#x2F;</span><br><span class="line">Disallow: &#x2F;css&#x2F;</span><br><span class="line"></span><br><span class="line">Sitemap: http:&#x2F;&#x2F;xxxxx.github.io&#x2F;sitemap.xml</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
-<h5 id="域名绑定"><a href="#域名绑定" class="headerlink" title="域名绑定"></a>域名绑定</h5><p>github域名绑定  </p>
+<h5 id="域名绑定"><a href="#域名绑定" class="headerlink" title="域名绑定"></a>域名绑定</h5><p>github域名绑定</p>
 <ol>
-<li>在网站 source 文件夹下新建 CNAME 文件(无后缀,要大写)  </li>
-<li>编辑 CNAME 文件添加你的域名  </li>
+<li>在网站 source 文件夹下新建 CNAME 文件(无后缀,要大写)</li>
+<li>编辑 CNAME 文件添加你的域名</li>
 <li>添加 CNAME 记录解析到你的 xxxxx.github.io</li>
 </ol>
 <p><a href="#1-3">上一页</a></p></div></div></div>]]></content>
@@ -201,49 +192,48 @@ Debian(Ubuntu)
   <entry>
     <title>IDA Android动态调试</title>
     <url>/ida/</url>
-    <content><![CDATA[<p>IDA Android动态调试<br>萌新一个目前什么都不会  </p>
+    <content><![CDATA[<p>IDA Android动态调试<br>萌新一个目前什么都不会</p>
 <div class="tabs" id="a"><ul class="nav-tabs"><li class="tab active"><a href="#a-1">准备</a></li><li class="tab"><a href="#a-2">IDA</a></li></ul><div class="tab-content"><div class="tab-pane active" id="a-1"><div class="note danger"><h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4></div>
 
 <ol>
-<li><p>复制<code>IDA\dbgsrv\android_server</code>文件到手机的<code>/data/local/tmp</code>目录下  </p>
+<li><p>复制<code>IDA\dbgsrv\android_server</code>文件到手机的<code>/data/local/tmp</code>目录下</p>
 </li>
 <li><p>进入adb shell</p>
-<figure class="highlight plain"><figcaption><span>第一个CMD</span></figcaption><table><tr><td class="code"><pre><span class="line">adb shell</span><br><span class="line">su</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><figcaption><span>第一个CMD</span></figcaption><table><tr><td class="code"><pre><span class="line">adb shell</span><br><span class="line">su</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>给android_server权限</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd &#x2F;data&#x2F;local&#x2F;tmp</span><br><span class="line">chmod 777 android_server #可使用ROOT管理器设置</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /data/<span class="built_in">local</span>/tmp</span><br><span class="line">chmod 777 android_server <span class="comment">#可使用ROOT管理器设置</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>启动android_server</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.&#x2F;android_server</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">./android_server</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>转发端口到本地</p>
-<figure class="highlight plain"><figcaption><span>第二个CMD</span></figcaption><table><tr><td class="code"><pre><span class="line">adb forward tcp:23946 tcp:23946</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><figcaption><span>第二个CMD</span></figcaption><table><tr><td class="code"><pre><span class="line">adb forward tcp:23946 tcp:23946</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>获取包名和Activity路径</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">adb shell dumpsys package</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">adb shell dumpsys package</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>调试模式启动应用</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">adb shell am start -D -n  包名&#x2F;activity路径</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">adb shell am start -D -n  包名/activity路径</span><br></pre></td></tr></table></figure>
 </li>
 </ol></div><div class="tab-pane" id="a-2"><div class="note danger"><h4 id="IDA"><a href="#IDA" class="headerlink" title="IDA"></a>IDA</h4></div>
 
 <ol>
 <li><p>打开IDA</p>
 </li>
-<li><p>调试<br>依次打开菜单<code>Debugger&gt;Attach&gt;Remote ARMLinux/Android debugger</code><br><code>hostname</code>处输入<code>127.0.0.1</code><br>附加到要调试的进程  </p>
+<li><p>调试<br>依次打开菜单<code>Debugger&gt;Attach&gt;Remote ARMLinux/Android debugger</code><br><code>hostname</code>处输入<code>127.0.0.1</code><br>附加到要调试的进程</p>
 </li>
 <li><p>DDMS<br><code>（建议提前打开DDMS）</code><br><code>Android\Sdk\tools</code>下运行<code>monitor</code><br>查看进程的端口并转发</p>
-<figure class="highlight plain"><figcaption><span>JDK开发环境</span></figcaption><table><tr><td class="code"><pre><span class="line">jdb -connect com.sun.jdi.SocketAttach:port&#x3D;8700,hostname&#x3D;127.0.0.1</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><figcaption><span>JDK开发环境</span></figcaption><table><tr><td class="code"><pre><span class="line">jdb -connect com.sun.jdi.SocketAttach:port=8700,hostname=127.0.0.1</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>IDA F9运行调试</p>
 </li>
 </ol>
 <h5 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h5><ul>
-<li><p>计算内存地址</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">IDA1 Ctrl+S打开查看需要调试的so文件的内存地址</span><br><span class="line">IDA2 打开已反汇编需要调试的地址</span><br><span class="line">内存地址+静态地址</span><br><span class="line">IDA1 快捷键G跳转到目标地址</span><br><span class="line">F2 设置断点</span><br><span class="line">F9 跳到下一个断点</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>其它调试方法</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">IDA 打开已反汇编的so</span><br><span class="line">设置断点</span><br><span class="line">IDA attach直接附加到进程</span><br><span class="line">弹出路径是否对错 直接选择没错</span><br></pre></td></tr></table></figure>
+<li>计算内存地址<br>IDA1 Ctrl+S打开查看需要调试的so文件的内存地址<br>IDA2 打开已反汇编需要调试的地址<br>内存地址+静态地址<br>IDA1 快捷键G跳转到目标地址<br>F2 设置断点<br>F9 跳到下一个断点</li>
+</ul>
+<ul>
+<li><p>其它调试方法<br>IDA 打开已反汇编的so<br>设置断点<br>IDA attach直接附加到进程<br>弹出路径是否对错 直接选择没错</p>
 </li>
 <li><p>《其它待补。。》</p>
 </li>
@@ -263,7 +253,7 @@ Debian(Ubuntu)
 <div class="tabs" id="1"><ul class="nav-tabs"><li class="tab active"><a href="#1-1">Debian/Ubuntu</a></li></ul><div class="tab-content"><div class="tab-pane active" id="1-1"><div class="note danger"><h4 id="Debian-Ubuntu"><a href="#Debian-Ubuntu" class="headerlink" title="Debian/Ubuntu"></a>Debian/Ubuntu</h4></div>
 
 <h5 id="apt-get相关"><a href="#apt-get相关" class="headerlink" title="apt-get相关"></a>apt-get相关</h5><ul>
-<li>解决无法使用dpkg处理，无法使用apt-get upgrade<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ps ax | grep dpkg                              #查找dpkg进程</span><br><span class="line">ps ax | grep apt-get                           #查找apt-get进程</span><br><span class="line">kill PID                                       #使用kill把dpkg的configure进程和apt-get upgrade进程杀掉</span><br><span class="line">mv &#x2F;var&#x2F;lib&#x2F;dpkg&#x2F;info &#x2F;var&#x2F;lib&#x2F;dpkg&#x2F;info_old   #把info改名为info_old</span><br><span class="line">mkdir &#x2F;var&#x2F;lib&#x2F;dpkg&#x2F;info                       #新建一个info文件夹</span><br><span class="line">apt-get update                                 #更新源</span><br><span class="line">dpkg --configure -a                            #修复dpkg</span><br><span class="line">apt-get -f install                             #修复软件包</span><br><span class="line">mv &#x2F;var&#x2F;lib&#x2F;dpkg&#x2F;info&#x2F;* &#x2F;var&#x2F;lib&#x2F;dpkg&#x2F;info_old #把更新后的info内容移动到info_old文件夹下</span><br><span class="line">rm -rf &#x2F;var&#x2F;lib&#x2F;dpkg&#x2F;info                      #删除info文件夹</span><br><span class="line">mv &#x2F;var&#x2F;lib&#x2F;dpkg&#x2F;info_old &#x2F;var&#x2F;lib&#x2F;dpkg&#x2F;info   #最后把info_old改名info</span><br><span class="line">apt-get upgrade                                #更新软件包</span><br><span class="line"></span><br><span class="line">#测试是否能正常使用apt-get install</span><br></pre></td></tr></table></figure>
+<li>解决无法使用dpkg处理，无法使用apt-get upgrade<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment">#查找dpkg进程</span></span><br><span class="line">ps ax | grep dpkg</span><br><span class="line"></span><br><span class="line"><span class="comment">#查找apt-get进程</span></span><br><span class="line">ps ax | grep apt-get</span><br><span class="line"></span><br><span class="line"><span class="comment">#使用kill把dpkg的configure进程和apt-get upgrade进程杀掉</span></span><br><span class="line"><span class="built_in">kill</span> PID</span><br><span class="line"></span><br><span class="line"><span class="comment">#把info改名为info_old</span></span><br><span class="line">mv /var/lib/dpkg/info /var/lib/dpkg/info_old</span><br><span class="line"></span><br><span class="line"><span class="comment">#新建一个info文件夹</span></span><br><span class="line">mkdir /var/lib/dpkg/info</span><br><span class="line"></span><br><span class="line"><span class="comment">#更新源</span></span><br><span class="line">apt-get update</span><br><span class="line"></span><br><span class="line"><span class="comment">#修复dpkg</span></span><br><span class="line">dpkg --configure -a</span><br><span class="line"></span><br><span class="line"><span class="comment">#修复软件包</span></span><br><span class="line">apt-get -f install</span><br><span class="line"></span><br><span class="line"><span class="comment">#把更新后的info内容移动到info_old文件夹下</span></span><br><span class="line">mv /var/lib/dpkg/info/* /var/lib/dpkg/info_old</span><br><span class="line"></span><br><span class="line"><span class="comment">#删除info文件夹</span></span><br><span class="line">rm -rf /var/lib/dpkg/info</span><br><span class="line"></span><br><span class="line"><span class="comment">#最后把info_old改名info</span></span><br><span class="line">mv /var/lib/dpkg/info_old /var/lib/dpkg/info</span><br><span class="line"></span><br><span class="line"><span class="comment">#更新软件包</span></span><br><span class="line">apt-get upgrade</span><br><span class="line"></span><br><span class="line"><span class="comment">#测试是否能正常使用apt-get install</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul></div></div></div>]]></content>
       <categories>
@@ -338,10 +328,10 @@ Debian(Ubuntu)
     <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
   <div class="hbe-input-container">
   <input type="password" id="hbePass" placeholder="" />
-    <label for="hbePass">Hey, password is required here.</label>
+    <label for="hbePass">请输入密码</label>
     <div class="bottom-line"></div>
   </div>
-  <script id="hbeData" type="hbeData" data-hmacdigest="f56f7defbc9d948c4b8fb11e431eecd5828ea9e66a57d9000fe9f7aa50cadca9">d41d6debe805aaf8b79c0be2ce780cddf2e4e43e6255c588f03f5cea5fedc1cb727adbe80246007c81b48af28e5baf0230a5b9fdc817684b5f0ecdd8da6da79ab9ef7086024d7158dd5ece2d7d77d75b787891c84b1cacaec1cf8d7f72fb96599a1158a0fc17602f0352c787ffe264b96e802815d53b0267b967c552f83098eadaa83645e189928761d764d7d1be0427</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="6c7e8f721ac3412a39b6a9f6ff820950ae1d4c23f5c0bb2d94524ce895857667">d41d6debe805aaf8b79c0be2ce780cddf2e4e43e6255c588f03f5cea5fedc1cb727adbe80246007c81b48af28e5baf0230a5b9fdc817684b5f0ecdd8da6da79ab9ef7086024d7158dd5ece2d7d77d75b787891c84b1cacaec1cf8d7f72fb96599a1158a0fc17602f0352c787ffe264b9bc18abd50745d03f8e5cff605bdabead</script>
 </div>
 <script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
