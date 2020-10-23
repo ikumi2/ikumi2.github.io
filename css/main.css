@@ -2925,11 +2925,13 @@ mark.search-keyword {
     padding: 10px 12px;
   }
 }
-.post-body p a {
+.post-body ol a,
+p a {
   color: #428bca;
   border-bottom: none;
 }
-.post-body p a:hover {
+.post-body ol a:hover,
+p a:hover {
   color: #e96900;
   border-bottom: 1px solid #e96900;
 }

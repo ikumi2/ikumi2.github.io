@@ -44,9 +44,9 @@
 <div class="tabs" id="1"><ul class="nav-tabs"><li class="tab active"><a href="#1-1">本地配置</a></li><li class="tab"><a href="#1-2">服务器配置</a></li><li class="tab"><a href="#1-3">部署</a></li><li class="tab"><a href="#1-4">优化</a></li></ul><div class="tab-content"><div class="tab-pane active" id="1-1"><div class="note danger"><h4 id="本地配置"><a href="#本地配置" class="headerlink" title="本地配置"></a>本地配置</h4></div>
 
 <h5 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h5><ol>
-<li>下载 <a href="https://git-scm.com/">git</a> 和 <a href="https://nodejs.org/en/">nodejs</a>并安装(全默认即可)</li>
-<li>在 D 盘里新建 blog 文件夹</li>
-<li>在 blog 文件夹右键 Git Bash Here</li>
+<li>下载<a href="https://git-scm.com/">git</a>和<a href="https://nodejs.org/en/">nodejs</a>并安装(全默认即可)</li>
+<li>在<code>D</code>盘里新建<code>blog</code>文件夹</li>
+<li>在<code>blog</code>文件夹右键<code>Git Bash Here</code></li>
 </ol>
 <h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><ol>
 <li><p>安装hexo</p>
