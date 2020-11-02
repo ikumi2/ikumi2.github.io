@@ -125,10 +125,10 @@ Debian(Ubuntu)<figure class="highlight plain"><table><tr><td class="code"><pre><
 </ol>
 <h5 id="添加git仓库"><a href="#添加git仓库" class="headerlink" title="添加git仓库"></a>添加git仓库</h5><ol>
 <li><p>添加网站根目录文件夹和git仓库</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd ~</span><br><span class="line">mkdir www</span><br><span class="line">git init --bare hexo.git</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">mkdir www</span><br><span class="line">git init --bare hexo.git</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在 git 仓库的 hooks 里创建 post-receive 文件 并给予执行权限</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd hexo.git</span><br><span class="line">cd hooks</span><br><span class="line">touch post-receive</span><br><span class="line">chmod a+x post-receive</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> hexo.git</span><br><span class="line"><span class="built_in">cd</span> hooks</span><br><span class="line">touch post-receive</span><br><span class="line">chmod a+x post-receive</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>设置钩子自动部署</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vi post-receive</span><br></pre></td></tr></table></figure>
@@ -140,13 +140,13 @@ Debian(Ubuntu)<figure class="highlight plain"><table><tr><td class="code"><pre><
 <p><a href="#1-1">上一页</a><br><a href="#1-3">下一页</a></p></div><div class="tab-pane" id="1-3"><div class="note danger"><h4 id="部署到服务器"><a href="#部署到服务器" class="headerlink" title="部署到服务器"></a>部署到服务器</h4></div>
 
 <h5 id="配置-deploy"><a href="#配置-deploy" class="headerlink" title="配置 deploy"></a>配置 deploy</h5><ul>
-<li>编辑网站配置文件 _config.yml<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@你的服务器IP:hexo.git,master</span><br><span class="line">&#123;%endcodeblock%&#125;</span><br><span class="line">&#123;%codeblock 多个仓库%&#125;</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: </span><br><span class="line">    vps1: git@你的服务器IP:hexo.git,master</span><br><span class="line">    vps2: git@你的服务器IP:hexo.git,master</span><br><span class="line">    github: git@github.com:xxxxx&#x2F;xxxxx.github.io.git,master</span><br></pre></td></tr></table></figure>
+<li>编辑网站配置文件 _config.yml<figure class="highlight sh"><figcaption><span>单服务</span></figcaption><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@你的服务器IP:hexo.git,master</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><figcaption><span>多服务</span></figcaption><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: </span><br><span class="line">    vps1: git@你的服务器IP:hexo.git,master</span><br><span class="line">    vps2: git@你的服务器IP:hexo.git,master</span><br><span class="line">    github: git@github.com:xxxxx/xxxxx.github.io.git,master</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
 <h5 id="hexo命令"><a href="#hexo命令" class="headerlink" title="hexo命令"></a>hexo命令</h5><ul>
-<li>部署到服务器  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo s    #启动本地服务</span><br><span class="line">hexo g    #生成</span><br><span class="line">hexo d -g    #部署并生成</span><br><span class="line">hexo clean    #清除缓存文件</span><br></pre></td></tr></table></figure>
+<li>部署到服务器  <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo s    <span class="comment">#启动本地服务</span></span><br><span class="line">hexo g    <span class="comment">#生成</span></span><br><span class="line">hexo d -g     <span class="comment">#部署并生成</span></span><br><span class="line">hexo clean    <span class="comment">#清除缓存文件</span></span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
@@ -154,7 +154,7 @@ Debian(Ubuntu)<figure class="highlight plain"><table><tr><td class="code"><pre><
 
 <h5 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h5><ul>
 <li><p>添加 Local Search 搜索服务<br>编辑 _config.yml 搜索 local_search 把 enable 设为 true</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">local_search:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">local_search:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>设置 Google Webmaster<br>打开 <a href="https://www.google.com/webmasters/tools">Google Search Console</a> 添加你的网站<br>选择备用 html 标记</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;meta name&#x3D;&quot;google-site-verification&quot; content&#x3D;&quot;xxxxx&quot; &#x2F;&gt;</span><br></pre></td></tr></table></figure>
@@ -168,7 +168,7 @@ Debian(Ubuntu)<figure class="highlight plain"><table><tr><td class="code"><pre><
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">url: http:&#x2F;&#x2F;pllog.top </span><br></pre></td></tr></table></figure>
 </li>
 <li><p>添加蜘蛛协议<br>在网站 source 文件夹下新建 robots.txt 文件 把下面内容复制到 robots.txt 里 并修改域名</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Allow: &#x2F;</span><br><span class="line">Allow: &#x2F;archives&#x2F;</span><br><span class="line">Allow: &#x2F;tags&#x2F;</span><br><span class="line">Allow: &#x2F;about&#x2F;</span><br><span class="line"></span><br><span class="line">Disallow: &#x2F;js&#x2F;</span><br><span class="line">Disallow: &#x2F;css&#x2F;</span><br><span class="line"></span><br><span class="line">Sitemap: http:&#x2F;&#x2F;xxxxx.github.io&#x2F;sitemap.xml</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Allow: /</span><br><span class="line">Allow: /archives/</span><br><span class="line">Allow: /tags/</span><br><span class="line">Allow: /about/</span><br><span class="line"></span><br><span class="line">Disallow: /js/</span><br><span class="line">Disallow: /css/</span><br><span class="line"></span><br><span class="line">Sitemap: http://xxxxx.github.io/sitemap.xml</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
@@ -275,14 +275,14 @@ Debian(Ubuntu)<figure class="highlight plain"><table><tr><td class="code"><pre><
 
 <div class="tabs" id="a"><ul class="nav-tabs"><li class="tab active"><a href="#a-1">日服EX</a></li><li class="tab"><a href="#a-2">台服EX</a></li><li class="tab"><a href="#a-3">更新记录</a></li><li class="tab"><a href="#a-4">注意</a></li></ul><div class="tab-content"><div class="tab-pane active" id="a-1"><details class="note "><summary><p>日服EX</p>
 </summary>
-<p> Ver 2.1.9<br><a href="https://share.weiyun.com/5ox6MYe">微云</a>  i7wx5c<br><a href="https://www.lanzous.com/b00l6wcli">蓝奏</a> mgo</p>
+<p> Ver 2.2.0<br><a href="https://share.weiyun.com/5ox6MYe">微云</a>  i7wx5c<br><a href="https://www.lanzous.com/b00l6wcli">蓝奏</a> mgo</p>
 
 </details></div><div class="tab-pane" id="a-2"><details class="note "><summary><p>台服EX</p>
 </summary>
 <p>Ver 1.8.5<br><a href="https://share.weiyun.com/57sKFH5">微云</a>  49wmi7<br><a href="https://www.lanzous.com/b0f13e2de">蓝奏</a> mgo</p>
 
 </details></div><div class="tab-pane" id="a-3"><ul>
-<li>10月20日 更新日服2.1.9版本   </li>
+<li>11月02日 更新日服2.2.0版本   </li>
 <li>5月21日 更新台服1.8.5版本   </li>
 </ul></div><div class="tab-pane" id="a-4"><ul>
 <li> 日服<br>EX=只解除谷歌验证<br>EX2=科技</li>
@@ -307,9 +307,9 @@ Debian(Ubuntu)<figure class="highlight plain"><table><tr><td class="code"><pre><
 </li>
 <li><p>脚本支持台服吗<br>目前不支持 如果请求人数达到预期就会考虑支持</p>
 </li>
+<li><p>谷歌服务<br>因谷歌服务较为特殊 一些机型没法安装或者出错<br>推荐刷入<a href="https://opengapps.org/">Gapps</a>或刷类原生系统</p>
+</li>
 </ul>
-<div class="note danger"><h4 id="谷歌服务"><a href="#谷歌服务" class="headerlink" title="谷歌服务"></a>谷歌服务</h4></div>
-<p>因谷歌服务较为特殊 一些机型没法安装或者出错<br>推荐刷入<a href="https://opengapps.org/">Gapps</a>或刷类原生系统</p>
 ]]></content>
       <categories>
         <category>游戏</category>
