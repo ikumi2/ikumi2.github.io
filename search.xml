@@ -331,7 +331,7 @@ Debian(Ubuntu)<figure class="highlight plain"><table><tr><td class="code"><pre><
     <label for="hbePass">请输入密码</label>
     <div class="bottom-line"></div>
   </div>
-  <script id="hbeData" type="hbeData" data-hmacdigest="6c7e8f721ac3412a39b6a9f6ff820950ae1d4c23f5c0bb2d94524ce895857667">d41d6debe805aaf8b79c0be2ce780cddf2e4e43e6255c588f03f5cea5fedc1cb727adbe80246007c81b48af28e5baf0230a5b9fdc817684b5f0ecdd8da6da79ab9ef7086024d7158dd5ece2d7d77d75b787891c84b1cacaec1cf8d7f72fb96599a1158a0fc17602f0352c787ffe264b9bc18abd50745d03f8e5cff605bdabead</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="3ebc9f0aa0fb99ad9d798eb69c5b24fadd7e1f665b0d31bbf86c38bdc4015d7e">d41d6debe805aaf8b79c0be2ce780cddf2e4e43e6255c588f03f5cea5fedc1cb727adbe80246007c81b48af28e5baf0230a5b9fdc817684b5f0ecdd8da6da79ab9ef7086024d7158dd5ece2d7d77d75b787891c84b1cacaec1cf8d7f72fb96599a1158a0fc17602f0352c787ffe264b9122a5f37e4d6ec0924b4a26805e1bf30b8b2ad1467066a44861a84a61ca73659</script>
 </div>
 <script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
