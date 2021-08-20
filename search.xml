@@ -331,8 +331,7 @@ Debian(Ubuntu)<figure class="highlight plain"><table><tr><td class="code"><pre><
 <ol>
 <li>安装Python和VapourSynth时记得勾选PATH添加环境变量 </li>
 <li>解压VapourSynthEditor 编辑脚本用 </li>
-<li>解压vapoursynth-portable-FATPACK把<code>Scripts</code>文件夹里的Python脚本放到<code>Python\Lib\site-packages</code>里面 </li>
-<li>解压vapoursynth-portable-FATPACK把<code>vapoursynth64\plugins</code>文件夹里的插件放到<code>VapourSynth\plugins</code>里面 </li>
+<li>解压vapoursynth-portable-FATPACK把<code>Scripts</code>Python脚本放到<code>Python\Lib\site-packages</code>里面<br>把<code>vapoursynth64\plugins</code>插件放到<code>VapourSynth\plugins</code>里面 </li>
 <li>把x265.exe放在<code>VapourSynth/core</code>里面 </li>
 </ol>
 <div class="note danger"><h4 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h4></div>
