@@ -1,63 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>IDA Android动态调试</title>
-    <url>/ida/</url>
-    <content><![CDATA[<p>IDA Android动态调试<br>萌新一个目前什么都不会</p>
-<div class="tabs" id="a"><ul class="nav-tabs"><li class="tab active"><a href="#a-1">准备</a></li><li class="tab"><a href="#a-2">IDA</a></li></ul><div class="tab-content"><div class="tab-pane active" id="a-1"><div class="note danger"><h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4></div>
-
-<ol>
-<li><p>复制<code>IDA\dbgsrv\android_server</code>文件到手机的<code>/data/local/tmp</code>目录下</p>
-</li>
-<li><p>进入adb shell</p>
-<figure class="highlight sh"><figcaption><span>第一个CMD</span></figcaption><table><tr><td class="code"><pre><span class="line">adb shell</span><br><span class="line">su</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>给android_server权限</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /data/<span class="built_in">local</span>/tmp</span><br><span class="line">chmod 777 android_server <span class="comment">#可使用ROOT管理器设置</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>启动android_server</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">./android_server</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>转发端口到本地</p>
-<figure class="highlight sh"><figcaption><span>第二个CMD</span></figcaption><table><tr><td class="code"><pre><span class="line">adb forward tcp:23946 tcp:23946</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>获取包名和Activity路径</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">adb shell dumpsys package</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>调试模式启动应用</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">adb shell am start -D -n  包名/activity路径</span><br></pre></td></tr></table></figure>
-</li>
-</ol></div><div class="tab-pane" id="a-2"><div class="note danger"><h4 id="IDA"><a href="#IDA" class="headerlink" title="IDA"></a>IDA</h4></div>
-
-<ol>
-<li><p>打开IDA</p>
-</li>
-<li><p>调试<br>依次打开菜单<code>Debugger&gt;Attach&gt;Remote ARMLinux/Android debugger</code><br><code>hostname</code>处输入<code>127.0.0.1</code><br>附加到要调试的进程</p>
-</li>
-<li><p>DDMS<br><code>（建议提前打开DDMS）</code><br><code>Android\Sdk\tools</code>下运行<code>monitor</code><br>查看进程的端口并转发</p>
-<figure class="highlight sh"><figcaption><span>JDK开发环境</span></figcaption><table><tr><td class="code"><pre><span class="line">jdb -connect com.sun.jdi.SocketAttach:port=8700,hostname=127.0.0.1</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>IDA F9运行调试</p>
-</li>
-</ol>
-<h5 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h5><ul>
-<li>计算内存地址<br>IDA1 Ctrl+S打开查看需要调试的so文件的内存地址<br>IDA2 打开已反汇编需要调试的地址<br>内存地址+静态地址<br>IDA1 快捷键G跳转到目标地址<br>F2 设置断点<br>F9 跳到下一个断点</li>
-</ul>
-<ul>
-<li><p>其它调试方法<br>IDA 打开已反汇编的so<br>设置断点<br>IDA attach直接附加到进程<br>弹出路径是否对错 直接选择没错</p>
-</li>
-<li><p>《其它待补。。》</p>
-</li>
-</ul></div></div></div>]]></content>
-      <categories>
-        <category>Android</category>
-      </categories>
-      <tags>
-        <tag>IDA</tag>
-        <tag>反汇编</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Aviutl</title>
     <url>/aviutl/</url>
     <content><![CDATA[<p>Aviutl 中文完整汉化版个人整合</p>
@@ -244,6 +187,63 @@ Debian(Ubuntu)<figure class="highlight plain"><table><tr><td class="code"><pre><
         <tag>Hexo</tag>
         <tag>Nginx</tag>
         <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>IDA Android动态调试</title>
+    <url>/ida/</url>
+    <content><![CDATA[<p>IDA Android动态调试<br>萌新一个目前什么都不会</p>
+<div class="tabs" id="a"><ul class="nav-tabs"><li class="tab active"><a href="#a-1">准备</a></li><li class="tab"><a href="#a-2">IDA</a></li></ul><div class="tab-content"><div class="tab-pane active" id="a-1"><div class="note danger"><h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4></div>
+
+<ol>
+<li><p>复制<code>IDA\dbgsrv\android_server</code>文件到手机的<code>/data/local/tmp</code>目录下</p>
+</li>
+<li><p>进入adb shell</p>
+<figure class="highlight sh"><figcaption><span>第一个CMD</span></figcaption><table><tr><td class="code"><pre><span class="line">adb shell</span><br><span class="line">su</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>给android_server权限</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /data/<span class="built_in">local</span>/tmp</span><br><span class="line">chmod 777 android_server <span class="comment">#可使用ROOT管理器设置</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动android_server</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">./android_server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>转发端口到本地</p>
+<figure class="highlight sh"><figcaption><span>第二个CMD</span></figcaption><table><tr><td class="code"><pre><span class="line">adb forward tcp:23946 tcp:23946</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取包名和Activity路径</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">adb shell dumpsys package</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>调试模式启动应用</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">adb shell am start -D -n  包名/activity路径</span><br></pre></td></tr></table></figure>
+</li>
+</ol></div><div class="tab-pane" id="a-2"><div class="note danger"><h4 id="IDA"><a href="#IDA" class="headerlink" title="IDA"></a>IDA</h4></div>
+
+<ol>
+<li><p>打开IDA</p>
+</li>
+<li><p>调试<br>依次打开菜单<code>Debugger&gt;Attach&gt;Remote ARMLinux/Android debugger</code><br><code>hostname</code>处输入<code>127.0.0.1</code><br>附加到要调试的进程</p>
+</li>
+<li><p>DDMS<br><code>（建议提前打开DDMS）</code><br><code>Android\Sdk\tools</code>下运行<code>monitor</code><br>查看进程的端口并转发</p>
+<figure class="highlight sh"><figcaption><span>JDK开发环境</span></figcaption><table><tr><td class="code"><pre><span class="line">jdb -connect com.sun.jdi.SocketAttach:port=8700,hostname=127.0.0.1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>IDA F9运行调试</p>
+</li>
+</ol>
+<h5 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h5><ul>
+<li>计算内存地址<br>IDA1 Ctrl+S打开查看需要调试的so文件的内存地址<br>IDA2 打开已反汇编需要调试的地址<br>内存地址+静态地址<br>IDA1 快捷键G跳转到目标地址<br>F2 设置断点<br>F9 跳到下一个断点</li>
+</ul>
+<ul>
+<li><p>其它调试方法<br>IDA 打开已反汇编的so<br>设置断点<br>IDA attach直接附加到进程<br>弹出路径是否对错 直接选择没错</p>
+</li>
+<li><p>《其它待补。。》</p>
+</li>
+</ul></div></div></div>]]></content>
+      <categories>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>IDA</tag>
+        <tag>反汇编</tag>
       </tags>
   </entry>
   <entry>
