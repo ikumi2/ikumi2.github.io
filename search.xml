@@ -290,9 +290,10 @@ Debian(Ubuntu)<figure class="highlight plain"><table><tr><td class="code"><pre><
 
 
 <div class="note danger"><h4 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h4></div>
+<!-- - 更改谷歌商店地区
+详见谷歌帮助[更改你的GooglePlay地区](https://support.google.com/googleplay/answer/7431675?hl=zh-Hans) -->
+
 <ul>
-<li><p>更改谷歌商店地区<br>详见谷歌帮助<a href="https://support.google.com/googleplay/answer/7431675?hl=zh-Hans">更改你的GooglePlay地区</a></p>
-</li>
 <li><p>黑屏 第二个QB不出现 掉线等<br>网络问题 尝试更换VPN</p>
 </li>
 <li><p>闪退<br>网络问题 大多数是直连玩家出现 因为直连下载时数据损坏导致闪退</p>
@@ -301,10 +302,10 @@ Debian(Ubuntu)<figure class="highlight plain"><table><tr><td class="code"><pre><
 </li>
 <li><p>修改版客户端有风险不<br>任何游戏修改都可能会封号 风险自己承担</p>
 </li>
-<li><p>谷歌服务<br>因谷歌服务较为特殊 一些机型没法安装或者出错<br>推荐刷入<a href="https://opengapps.org/">Gapps</a>或刷类原生系统</p>
-</li>
 </ul>
-]]></content>
+<!-- - 谷歌服务
+因谷歌服务较为特殊 一些机型没法安装或者出错
+推荐刷入[Gapps](https://opengapps.org/)或刷类原生系统 -->]]></content>
       <categories>
         <category>游戏</category>
         <category>手游</category>
