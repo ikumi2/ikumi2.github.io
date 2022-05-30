@@ -275,14 +275,14 @@ Debian(Ubuntu)<figure class="highlight plain"><table><tr><td class="code"><pre><
 
 <div class="tabs" id="a"><ul class="nav-tabs"><li class="tab active"><a href="#a-1">日服EX</a></li><li class="tab"><a href="#a-2">台服EX</a></li><li class="tab"><a href="#a-3">更新记录</a></li><li class="tab"><a href="#a-4">注意</a></li></ul><div class="tab-content"><div class="tab-pane active" id="a-1"><details class="note "><summary><p>日服EX</p>
 </summary>
-<p> Ver 2.5.0<br><a href="https://share.weiyun.com/5ox6MYe">微云</a>  i7wx5c<br><a href="https://213.lanzoui.com/b00l6wcli">蓝奏</a> mgo</p>
+<p> Ver 2.5.1<br><a href="https://share.weiyun.com/5ox6MYe">微云</a>  i7wx5c<br><a href="https://213.lanzoui.com/b00l6wcli">蓝奏</a> mgo</p>
 
 </details></div><div class="tab-pane" id="a-2"><details class="note "><summary><p>台服EX</p>
 </summary>
 <p>Ver 2.2.3<br><a href="https://share.weiyun.com/57sKFH5">微云</a>  49wmi7<br><a href="https://213.lanzoui.com/b0f13e2de">蓝奏</a> mgo</p>
 
 </details></div><div class="tab-pane" id="a-3"><ul>
-<li>5月22日 更新日服2.5.0版本</li>
+<li>5月31日 更新日服2.5.1版本</li>
 <li>6月1日 更新台服2.2.3版本</li>
 </ul></div><div class="tab-pane" id="a-4"><ul>
 <li> 日服<br>EX=只解除谷歌验证<br>EX2=科技</li>
@@ -290,9 +290,10 @@ Debian(Ubuntu)<figure class="highlight plain"><table><tr><td class="code"><pre><
 
 
 <div class="note danger"><h4 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h4></div>
+<!-- - 更改谷歌商店地区
+详见谷歌帮助[更改你的GooglePlay地区](https://support.google.com/googleplay/answer/7431675?hl=zh-Hans) -->
+
 <ul>
-<li><p>更改谷歌商店地区<br>详见谷歌帮助<a href="https://support.google.com/googleplay/answer/7431675?hl=zh-Hans">更改你的GooglePlay地区</a></p>
-</li>
 <li><p>黑屏 第二个QB不出现 掉线等<br>网络问题 尝试更换VPN</p>
 </li>
 <li><p>闪退<br>网络问题 大多数是直连玩家出现 因为直连下载时数据损坏导致闪退</p>
@@ -301,10 +302,10 @@ Debian(Ubuntu)<figure class="highlight plain"><table><tr><td class="code"><pre><
 </li>
 <li><p>修改版客户端有风险不<br>任何游戏修改都可能会封号 风险自己承担</p>
 </li>
-<li><p>谷歌服务<br>因谷歌服务较为特殊 一些机型没法安装或者出错<br>推荐刷入<a href="https://opengapps.org/">Gapps</a>或刷类原生系统</p>
-</li>
 </ul>
-]]></content>
+<!-- - 谷歌服务
+因谷歌服务较为特殊 一些机型没法安装或者出错
+推荐刷入[Gapps](https://opengapps.org/)或刷类原生系统 -->]]></content>
       <categories>
         <category>游戏</category>
         <category>手游</category>
